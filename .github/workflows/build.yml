@@ -1,0 +1,23 @@
+name: Build Mod
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Empacotar
+      run: |
+        mkdir -p Mod_Pronto
+        cp manifest.json Mod_Pronto/
+        cp content.json Mod_Pronto/
+
+    - name: Salvar Zip
+      uses: actions/upload-artifact@v4
+      with:
+        name: PrensaCobre-Mod
+        path: Mod_Pronto/
