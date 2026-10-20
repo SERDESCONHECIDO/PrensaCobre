@@ -1,0 +1,10 @@
+{
+  "Name": "Prensa de Cobre",
+  "Author": "SeuNome",
+  "Version": "1.0.0",
+  "Description": "Adiciona a Prensa de Cobre, uma maquina que transforma minerio em barra.",
+  "UniqueID": "SeuNome.PrensaCobre",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
