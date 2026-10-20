@@ -1,0 +1,57 @@
+{
+  "Format": "2.0.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "PrensaDeCobre": {
+          "Name": "PrensaDeCobre",
+          "DisplayName": "Prensa de Cobre",
+          "Description": "Transforma 5 minerios de cobre em 1 barra de cobre.",
+          "Price": 500,
+          "Texture": "TileSheets/Craftables",
+          "SpriteIndex": 13,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC)PrensaDeCobre": {
+          "OutputRules": [
+            {
+              "Id": "PrensaDeCobre_Regra",
+              "Triggers": [
+                {
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "(O)378",
+                  "RequiredCount": 5
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "(O)334",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "PrensaDeCobre_Receita": "388 10 390 10/Home/PrensaDeCobre/true/null/null"
+      }
+    }
+  ]
+}
